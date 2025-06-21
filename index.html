@@ -31,7 +31,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1750526193960">
+  <link rel="stylesheet" href="/css/style.css?v=1750527685626">
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div class="nexmoe-count-item"><span>Articles</span>1 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div class="nexmoe-count-item"><span>Articles</span>2 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
         <div class="nexmoe-count-item"><span>Tags</span>0<div class="item-radius"></div><div class="item-radius item-right"></div></div>
         <div class="nexmoe-count-item"><span>Categories</span>0<div class="item-radius"></div><div class="item-radius item-right"></div></div>
     </div>
@@ -144,7 +144,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">Archive</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -181,6 +181,55 @@
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
         <section class="nexmoe-posts">
+    
+    <div class="nexmoe-post">
+        <a href="/2025/06/22/git%E3%80%81curl%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
+                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="123" class="lazyload">
+                    <h1>123</h1>
+                </div>
+            
+        </a>
+        
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2025年06月22日</a>
+            <a><i class="nexmoefont icon-areachart"></i>373 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+        
+        <article>
+            
+                <p>在 Git 中设置代理可以通过配置 <code>http.proxy</code> 和 <code>https.proxy</code> 来实现。以下是具体步骤：</p>
+<h3 id="1-设置-HTTP-代理"><a href="#1-设置-HTTP-代理" class="headerlink" title="1. 设置 HTTP 代理"></a>1. 设置 HTTP 代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://proxy.example.com:8080</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-设置-HTTPS-代理"><a href="#2-设置-HTTPS-代理" class="headerlink" title="2. 设置 HTTPS 代理"></a>2. 设置 HTTPS 代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global https.proxy https://proxy.example.com:8080</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-设置代理的用户名和密码（如果需要）"><a href="#3-设置代理的用户名和密码（如果需要）" class="headerlink" title="3. 设置代理的用户名和密码（如果需要）"></a>3. 设置代理的用户名和密码（如果需要）</h3><p>如果代理服务器需要认证，可以在 URL 中包含用户名和密码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://username:password@proxy.example.com:8080</span><br><span class="line">git config --global https.proxy https://username:password@proxy.example.com:8080</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-取消代理设置"><a href="#4-取消代理设置" class="headerlink" title="4. 取消代理设置"></a>4. 取消代理设置</h3><p>如果需要取消代理设置，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-查看当前代理配置"><a href="#5-查看当前代理配置" class="headerlink" title="5. 查看当前代理配置"></a>5. 查看当前代理配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --get http.proxy</span><br><span class="line">git config --global --get https.proxy</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-针对特定域名设置代理"><a href="#6-针对特定域名设置代理" class="headerlink" title="6. 针对特定域名设置代理"></a>6. 针对特定域名设置代理</h3><p>如果只想对特定域名使用代理，可以这样配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.https://example.com.proxy http://proxy.example.com:8080</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-使用环境变量设置代理"><a href="#7-使用环境变量设置代理" class="headerlink" title="7. 使用环境变量设置代理"></a>7. 使用环境变量设置代理</h3><p>你也可以通过环境变量设置代理：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=http://proxy.example.com:8080</span><br><span class="line"><span class="built_in">export</span> https_proxy=https://proxy.example.com:8080</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>确保代理服务器的地址和端口正确。</li>
+<li>如果代理需要认证，确保用户名和密码无误。</li>
+<li>取消代理设置后，Git 将不再使用代理。</li>
+<li><strong>通过 Git 命令行参数临时设置代理<br>Git 本身不支持直接通过命令行参数设置代理，但可以通过环境变量实现</strong></li>
+</ul>
+<p>通过这些步骤，你可以轻松为 Git 配置代理。</p>
+
+            
+        </article>
+    </div>
     
     <div class="nexmoe-post">
         <a href="/2025/06/21/hello-world/">
@@ -935,7 +984,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1750526193960"></script>
+<script src="/js/app.js?v=1750527685626"></script>
 
 <script src="https://lib.baomitu.com/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 <script>
